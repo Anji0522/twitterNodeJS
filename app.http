@@ -1,0 +1,60 @@
+### API 1: Register a new user
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+### API 2: Login
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567"
+}
+
+### API 3: Get latest tweets of people whom the user follows
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 4: Get list of people the user follows
+GET http://localhost:3000/user/following/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 5: Get list of followers
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 6: Get a specific tweet (replace '1' with an actual tweet ID)
+GET http://localhost:3000/tweets/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 7: Get likes of a specific tweet
+GET http://localhost:3000/tweets/1/likes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 8: Get replies of a specific tweet
+GET http://localhost:3000/tweets/1/replies/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 9: Get all tweets of the user
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+### API 10: Create a new tweet
+POST http://localhost:3000/user/tweets/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
+
+{
+  "tweet": "Ready to don the Blue and Gold"
+}
+
+### API 11: Delete a tweet (replace '1' with a tweet ID created by this user)
+DELETE http://localhost:3000/tweets/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTc5MDkzMzk0Nn0.0yenCv_NtwGLrZU40rxV5p4b2VnP4pIiuvwjJ2RleQA
